@@ -15,12 +15,12 @@ def setup():
 def listen(name, serial_port="COM5", bitrate=9600):
     print(f"\033[95m[{serial_port}]\033[0m Listening at {bitrate} bit/sec. Writing to <{name}>")
 
-    # ser = serial.Serial(serial_port, bitrate)
+    ser = serial.Serial(serial_port, bitrate)
 
-    # while True:
-    #     if ser.in_waiting > 0:
-    #         data = ser.readline().decode('utf-8').strip()
-    #         print(data)
+    while True:
+        if ser.in_waiting > 0:
+            data = ser.readline().decode('utf-8').strip()
+            print(data)
 
 
 if __name__ == "__main__":
