@@ -14,14 +14,8 @@ void loop() {
   // put your main code here, to run repeatedly:
   int lightValue = analogRead(diodePin);  // Read the state of the photodiode pin
 
-  if (lightValue == HIGH) {
-    //digitalWrite(ledPin, HIGH);  // Turn on the LED if light is detected
-    Serial.println("Light Detected");
-  } else {
-    //digitalWrite(ledPin, LOW);   // Turn off the LED if no light is detected
-    Serial.println("No Light");
-  }
+  Serial.println(lightValue);
 
-  delay(100);  // Delay for 1 second before reading again (adjust as needed)
+  delay(100);  // Delay for 100 ms before reading again (adjust as needed)
 
 }
